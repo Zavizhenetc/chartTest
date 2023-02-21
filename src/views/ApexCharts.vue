@@ -60,6 +60,16 @@ export default {
       },
     };
     const chartOptionsLine = {
+      title: {
+        text: 'Использование рабочего времени',
+        align: 'center',
+        floating: false,
+        style: {
+          fontSize: '16px',
+          fontWeight: 400,
+          color: '#31315B',
+        },
+      },
       chart: {
         type: 'area',
         selection: {
@@ -89,10 +99,21 @@ export default {
           },
         },
       },
+      yaxis: {
+        title: {
+          text: 'Эффективность использования рабочего времени',
+          style: {
+            cssClass: 'apexcharts-yaxis-title',
+          },
+        },
+      },
       grid: {
         borderColor: '#E0E0EA',
         strokeDashArray: 5,
         yaxis: {
+          title: {
+            text: 'Эффективность использования рабочего времени'
+          },
           lines: {
             show: false
           }
@@ -138,5 +159,13 @@ export default {
   max-width: 920px;
   height: 70vh;
   margin: 0 auto;
+}
+
+.apexcharts-yaxis-title {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: pre-wrap;
+  text-transform: uppercase;
+  color: #31315B;
 }
 </style>
